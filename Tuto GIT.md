@@ -5,15 +5,15 @@
 Ils ouvrent un terminal (CMD, PowerShell, ou un terminal sur Mac).
 Ils exécutent la commande suivante pour cloner le dépôt :
 "https://github.com/Romaindujardin/MUSEUM-VR.git"
-Cela crée un dossier DriveMe dans leur répertoire utilisateur, qui contient tous les fichiers du projet.
+Cela crée un dossier MUSEUM-VR dans leur répertoire utilisateur, qui contient tous les fichiers du projet.
 
 ### Naviguer dans le dossier cloné :
 Ils doivent se déplacer dans le dossier cloné :
-"cd TechnoWeb"
+"cd MUSEUM-VR"
 
 ### Créer une nouvelle branche :
 Ils créent une nouvelle branche pour travailler sur leurs modifications, par exemple pour ajouter des assets :
-"git checkout -b accueil  # Ici, "accueil" est le nom de la branche"
+"git checkout -b assets  # Ici, "assets" est le nom de la branche"
 
 ### Faire des modifications :
 Ils ouvrent Unity et effectuent les modifications nécessaires (ajouter des modèles, scripts, textures, etc.).
@@ -24,11 +24,11 @@ Une fois les modifications terminées, ils retournent au terminal et ajoutent le
 
 ### Valider les modifications :
 Ils effectuent une validation pour enregistrer les changements :
-"git commit -m "Ajout de la page acceuil"  # Remplacer par un message descriptif"
+"git commit -m "Ajout des assets"  # Remplacer par un message descriptif"
 
 ### Pousser la branche vers GitHub :
 Ils poussent leurs changements sur la branche qu'ils ont créée :
-"git push origin acceuil  # "asset" est le nom de leur branche"
+"git push origin assets  # "asset" est le nom de leur branche"
 
 ### Créer une Pull Request :
 Après avoir poussé leurs modifications, ils doivent aller sur GitHub pour créer une Pull Request afin de fusionner leurs changements dans la branche main.
