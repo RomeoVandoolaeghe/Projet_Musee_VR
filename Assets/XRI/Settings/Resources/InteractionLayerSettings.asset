@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LayerNames:
   - Default
-  - rectangle
-  - petitrec
-  - grosrec
-  - 
-  - 
-  - 
+  - 1_rectangle
+  - 1_petitrec
+  - 1_grosrec
+  - 2_top_right
+  - 2_mid_right
+  - 2_bottom_right
   - 
   - 
   - 
