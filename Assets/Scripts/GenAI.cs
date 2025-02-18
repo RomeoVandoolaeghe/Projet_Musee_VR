@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -14,7 +14,7 @@ public class GenerateImage : MonoBehaviour
 {
     [Header("References (Assign these in the Inspector)")]
     public Renderer tableauRenderer;      // Should be the Renderer component of your "tableau5" GameObject.
-    public TextMeshPro loadingText;       // UI text element to indicate loading.
+    public TextMeshProUGUI loadingText;       // UI text element to indicate loading.
     public Button imageButton;            // The button that, when pressed, triggers image generation.
 
     private const string API_KEY = "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";
@@ -56,7 +56,7 @@ public class GenerateImage : MonoBehaviour
         // Set default loading text.
         if (loadingText != null)
         {
-            loadingText.text = "Press Button to\nGenerate an Image";
+            loadingText.text = "";
             loadingText.gameObject.SetActive(true);
         }
         else
@@ -97,7 +97,7 @@ public class GenerateImage : MonoBehaviour
         }
 
         // Set loading text and disable button
-        loadingText.text = "Loading...\nPlease Wait";
+        loadingText.text = "I am generating an Image. Please Wait...";
         imageButton.interactable = false;
 
         string randomPrompt = prompts[UnityEngine.Random.Range(0, prompts.Length)];
@@ -118,7 +118,7 @@ public class GenerateImage : MonoBehaviour
         }
 
         // Reset UI state
-        loadingText.text = "Press Button to\nGenerate an Image";
+        loadingText.text = randomPrompt;
         imageButton.interactable = true;
     }
 
