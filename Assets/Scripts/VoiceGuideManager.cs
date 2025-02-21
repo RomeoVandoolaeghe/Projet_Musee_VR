@@ -3,19 +3,19 @@ using UnityEngine;
 public class VoiceGuideManager : MonoBehaviour
 {
     public AudioSource audioSource;  // L'AudioSource pour jouer l'instruction
-    public AudioClip voixDEntree; // Fichier audio nommé "voix d'entrée"
-    public float startDelay = 2f; // Délai avant de jouer l'audio
+    public AudioClip voixDEntree; // Fichier audio nomme "voix d'entree"
+    public float startDelay = 2f; // Dï¿½lai avant de jouer l'audio
 
     void Start()
     {
         if (voixDEntree != null)
         {
-            // Lancer l'instruction après un délai
+            // Lancer l'instruction apres un delai
             Invoke(nameof(PlayInstruction), startDelay);
         }
         else
         {
-            Debug.LogWarning("Aucun fichier audio 'voix d'entrée' assigné !");
+            Debug.LogWarning("Aucun fichier audio 'voix d'entree' assigne !");
         }
     }
 
@@ -23,6 +23,6 @@ public class VoiceGuideManager : MonoBehaviour
     {
         audioSource.clip = voixDEntree;
         audioSource.Play();
-        Debug.Log("Lecture de la voix d'entrée.");
+        Debug.Log("Lecture de la voix d'entree.");
     }
 }
