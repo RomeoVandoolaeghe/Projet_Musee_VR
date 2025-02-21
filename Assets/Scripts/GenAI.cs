@@ -14,6 +14,7 @@ public class GenerateImage : MonoBehaviour
 {
     [Header("References (Assign these in the Inspector)")]
     public Renderer tableauRenderer;      // Should be the Renderer component of your "tableau5" GameObject.
+    public Renderer salleRenderer;        // Should be the Renderer component of your "salle" GameObject.
     public TextMeshProUGUI loadingText;       // UI text element to indicate loading.
     public Button imageButton;            // The button that, when pressed, triggers image generation.
 
@@ -91,6 +92,12 @@ public class GenerateImage : MonoBehaviour
         }
 
         if (tableauRenderer == null)
+        {
+            Debug.LogError("Tableau Renderer is not assigned!");
+            yield break;
+        }
+
+        if (salleRenderer == null)
         {
             Debug.LogError("Tableau Renderer is not assigned!");
             yield break;
@@ -195,6 +202,15 @@ public class GenerateImage : MonoBehaviour
         if (tableauRenderer != null)
         {
             tableauRenderer.material.mainTexture = currentTexture;
+            Debug.Log("Texture applied successfully.");
+        }
+        else
+        {
+            Debug.LogError("Tableau Renderer is not assigned!");
+        }
+        if (salleRenderer != null)
+        {
+            salleRenderer.material.mainTexture = currentTexture;
             Debug.Log("Texture applied successfully.");
         }
         else
