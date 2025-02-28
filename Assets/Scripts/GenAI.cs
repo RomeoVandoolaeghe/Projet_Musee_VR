@@ -15,7 +15,7 @@ public class GenerateImage : MonoBehaviour
     [Header("References (Assign these in the Inspector)")]
     public Renderer tableauRenderer;      // Should be the Renderer component of your "tableau5" GameObject.
     public Renderer salleRenderer;        // Should be the Renderer component of your "salle" GameObject.
-    public TextMeshProUGUI loadingText;       // UI text element to indicate loading.
+    public TextMeshPro loadingText;       // UI text element to indicate loading.
     public Button imageButton;            // The button that, when pressed, triggers image generation.
 
     private const string API_KEY = "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";
@@ -118,15 +118,22 @@ public class GenerateImage : MonoBehaviour
         {
             Debug.Log("Image generated successfully.");
             ApplyTexture(imagePath);
+            // Reset UI state
+            loadingText.text = randomPrompt;
+            imageButton.interactable = true;
         }
         else
         {
-            Debug.LogError("Failed to generate image.");
+            loadingText.text = "Failed. Try Again.";
+            StartCoroutine(ResetLoadingText());
+            imageButton.interactable = true;
         }
+    }
 
-        // Reset UI state
-        loadingText.text = randomPrompt;
-        imageButton.interactable = true;
+    private IEnumerator ResetLoadingText()
+    {
+        yield return new WaitForSeconds(15);
+        loadingText.text = "";
     }
 
     private async Task<string> GenerateImageFromAPI(string prompt)
@@ -202,6 +209,7 @@ public class GenerateImage : MonoBehaviour
         if (tableauRenderer != null)
         {
             tableauRenderer.material.mainTexture = currentTexture;
+            StartCoroutine(ResetLoadingText());
             Debug.Log("Texture applied successfully.");
         }
         else
@@ -211,6 +219,7 @@ public class GenerateImage : MonoBehaviour
         if (salleRenderer != null)
         {
             salleRenderer.material.mainTexture = currentTexture;
+            StartCoroutine(ResetLoadingText());
             Debug.Log("Texture applied successfully.");
         }
         else
