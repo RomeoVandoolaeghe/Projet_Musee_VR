@@ -23,6 +23,7 @@ Museum VR est un projet développé sur Unity visant à créer une expérience i
 - **Unity** (pour le développement du musée VR)
 - **XR Interaction Toolkit** (gestion des interactions VR)
 - **Stable Diffusion API** (génération des tableaux IA)
+- **Meta Quest 3**
 
 ## Futures Améliorations
 - Ajout de popups informatifs affichant des descriptions des œuvres lorsqu'elles sont regardées.
