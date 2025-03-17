@@ -51,7 +51,5 @@ Museum VR est un projet développé sur Unity visant à créer une expérience i
 4. **Lancer le projet**
    - Branchez votre casque VR et lancez la scène principale.
 
-## Licence
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus d’informations.
 
 
