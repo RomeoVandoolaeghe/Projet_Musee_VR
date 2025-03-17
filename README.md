@@ -44,7 +44,7 @@ Museum VR est un projet développé sur Unity visant à créer une expérience i
    git clone https://github.com/votre-repo/museum-vr.git
    ```
 2. **Ouvrir sous Unity**
-   - Assurez-vous d’avoir **Unity 2022 ou plus récent** installé.
+   - Assurez-vous d’avoir **Unity 2022.3.46F1** installé.
    - Ouvrez le projet avec Unity Hub.
 3. **Configurer les API**
    - Récupérez une clé API Stable Diffusion et configurez-la dans Unity.
