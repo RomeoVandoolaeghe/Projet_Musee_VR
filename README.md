@@ -23,6 +23,8 @@ Museum VR est un projet développé sur Unity visant à créer une expérience i
 ### 3. **Intelligence Artificielle**
 - Deux tableaux générés dynamiquement grâce à **Stable Diffusion**.
 - Un bouton sous chaque tableau permet de générer une nouvelle version de l’image via une requête API.
+![CleanShot 2025-03-17 at 09 40 38](https://github.com/user-attachments/assets/53e03d46-9cfc-44d3-ae5f-960809723402)
+
 
 ## Technologies Utilisées
 - **Unity** (pour le développement du musée VR)
