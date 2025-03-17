@@ -13,6 +13,8 @@ Museum VR est un projet développé sur Unity visant à créer une expérience i
 ### 2. **Tableaux Immersifs**
 - Les œuvres 2D peuvent être traversées pour entrer dans une pièce immersive où l’œuvre est reproduite en 3D.
 - Les œuvres de Piet Mondrian prennent la forme de puzzles à assembler.
+![image](https://github.com/user-attachments/assets/fbf82d64-42d0-4a39-80ef-32267aebd861)
+
 - Les œuvres de René Magritte proposent une interaction pour modifier certains éléments.
 
 ### 3. **Intelligence Artificielle**
